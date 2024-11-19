@@ -34,14 +34,60 @@
 <h2 align="left"> 📹 Link do vídeo</h2>
 
 ```bash
-https://youtu.be/MsGUwGbkH_E
 ```
 
-<h2 align="left"> 📝 Testes dos endpoints</h2>
+<h2 align="left"> 🎰 Conexão VM Linux</h2>
+1. **Abra um terminal de comando em qualquer máquina que deseja e digite o comando abaixo**
 
-<h3 align="left"> ☁️ Endpoint Nuvem</h3>
+```bash
+ssh -i ~/.ssh/id_rsa.pem nib-admin@20.3.241.188
+```
+
+2. **Após a mensagem "Are you sure you want to continue connecting (yes/no/[fingerprint])?" digite o seguinte comando**
+```bash
+yes
+```
+
+3. **Por fim, digite a senha abaixo para acessar a VM**
+```bash
+GlobalSolution.2024
+```
+
+<h2 align="left"> 🪟 Conexão VM Windows</h2>
+
+1. **Acesse o site da Azure e baixe o arquivo RDP da seguinte máquina: vm-nib**
 
 
+2. **Digite a senha para acessar a VM**
+
+3. **Abra um terminal PowerShell e digite os seguintes comandos:**
+
+```bash
+cd /
+```
+```bash
+cd .\NIB_global\
+```
+
+4. **Comando para derrubar o ambiente Docker e remover todas as imagens construídas para garantir que não haja interferências**
+```bash
+docker compose down --rmi all
+```
+
+5. **Comando para construir uma imagem docker com o seguinte nome: nib-global**
+```bash
+docker build --tag nib-global .
+```
+
+5. **Após a finalização do passo anterior, digite o seguinte comando para subir o container**
+```bash
+docker container run --name nib-api-global -p 8080:8080 -d nib-global
+```
+*Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada para seguir os próximos passos*
+
+6. **Abra um novo terminal para testar os endpoints por linha de comando**
+
+<h2 align="left"> 🎰 Teste dos Endpoints via curl</h2>
 <h3 align="left"> 🧝‍♀️ Usuário</h3>
 
 1. **POST**
@@ -88,23 +134,6 @@ Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
 <ul>
   <li> Igor Gabriel Pereira Marcondes <strong>RM 553544 </strong></li>
-  <dl> 
-    <dt> <strong> Matérias responsáveis </strong></dt>
-    <dd>  COMPLIANCE & QUALITY ASSURANCE </dd>
-    <dd>  MOBILE APP DEVELOPMENT </dd>
-  </dl>
   <li> Maria Beatriz Reis Fogolin de Godoy <strong>RM 552669 </strong></li>
-   <dl> 
-    <dt> <strong> Matérias responsáveis </strong></dt>
-         <dd>  DEVOPS TOOLS E CLOUD COMPUTING </dd>
-          <dd> MASTERING RELATIONAL AND NON RELATIONAL DATABASE </dd>
-          <dd> JAVA ADVANCED  </dd>
-  </dl>
-  <li> Nicholas Pereira Paulo Lima Barbosa <strong>RM 552744 </strong></li>
-  <dl> 
-    <dt> <strong> Matérias responsáveis </strong></dt>
-    <dd>  ADVANCED BUSINESS DEVELOPMENT WITH .NET </dd>
-    <dd>  DISRUPTIVE ARCHITECTURES: IOT, IOB & GENERATIVE IA </dd>
- </dd>
-  </dl>
+  <li> Nicholas Pereira Paulo Lima Barbosa <strong>RM 552744 </strong></li
 </ul>
