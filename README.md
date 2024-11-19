@@ -34,6 +34,7 @@
 <h2 align="left"> 📹 Link do vídeo</h2>
 
 ```bash
+https://www.youtube.com/watch?v=KTMfvhpd1f4
 ```
 
 <h2 align="left"> 🎰 Conexão VM Linux</h2>
