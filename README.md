@@ -124,7 +124,7 @@ Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/nascimento/1990-01-01 -
 6. **PUT Update all**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Put -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste atualização", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "2002-11-01", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Put -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste update", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "2002-11-01", "emailUser": "maria.fogolin@example.com"}'
 ```
 7. **DELETE by CPF**
 
