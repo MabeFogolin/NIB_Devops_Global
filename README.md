@@ -82,7 +82,7 @@ docker build --tag nib-global .
 
 5. **Após a finalização do passo anterior, digite o seguinte comando para subir o container**
 ```bash
-docker container run --name nib-api-global -p 8080:8080 -d nib-global
+docker compose up -d
 ```
 *Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada para seguir os próximos passos*
 
