@@ -100,19 +100,19 @@ docker compose up -d
 1. **POST**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste cpf", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "1990-01-01", "emailUser": "maria.fogolin@example.com"}'
+Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste cpf", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "1990-01-01", "emailUser": "maria.fogolin@example.com"}'
 ```
 
 2. **GET ALL**
 
 ```bash
- Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/todos -Method Get
+ Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/todos -Method Get
 ```
 
 3. **GET Find by CPF**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Get
+Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/cpf/92712116003 -Method Get
 ```
 
 4. **GET Find by Data nascimento & Page**
@@ -124,24 +124,24 @@ Invoke-RestMethod -Uri "http://40.90.198.227:8080/usuario/nascimento?dataNascime
 5. **GET Find by Data nascimento**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/nascimento/1990-01-01 -Method Get
+Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/nascimento/1990-01-01 -Method Get
 ```
 
 6. **PUT Update all**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Put -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste update", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "2002-11-01", "emailUser": "maria.fogolin@example.com"}'
+Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/cpf/92712116003 -Method Put -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste update", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "2002-11-01", "emailUser": "maria.fogolin@example.com"}'
 ```
 7. **DELETE by CPF**
 
 ```bash
-Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Delete
+Invoke-RestMethod -Uri http://40.90.198.227:80/usuario/cpf/92712116003 -Method Delete
 ```
 
 <h2 align="left"> 🎰 Teste dos Endpoints SWAGGER </h2>
 
 ```bash
-http://40.90.198.227:8080/swagger-ui/index.html#/
+http://40.90.198.227:80/swagger-ui/index.html#/
 ```
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
