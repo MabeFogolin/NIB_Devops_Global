@@ -37,6 +37,10 @@
 https://www.youtube.com/watch?v=KTMfvhpd1f4
 ```
 
+<h2 align="left"> :basecamp: Relacionamentos: Visão banco</h2>
+
+<img src="/Imagens/Logical.png">
+
 <h2 align="left"> 🎰 Conexão VM Linux</h2>
 
 1. **Abra um terminal de comando em qualquer máquina que deseja e digite o comando abaixo**
@@ -55,7 +59,7 @@ yes
 GlobalSolution.2024
 ```
 
-<h2 align="left"> 🪟 Conexão VM Windows</h2>
+<h2 align="left"> :minidisc: Conexão VM Windows</h2>
 
 1. **Acesse o site da Azure e baixe o arquivo RDP da seguinte máquina: vm-nib**
 
@@ -90,6 +94,7 @@ docker compose up -d
 6. **Abra um novo terminal para testar os endpoints por linha de comando**
 
 <h2 align="left"> 🎰 Teste dos Endpoints via curl</h2>
+
 <h3 align="left"> 🧝‍♀️ Usuário</h3>
 
 1. **POST**
@@ -131,6 +136,12 @@ Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method
 
 ```bash
 Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/cpf/92712116003 -Method Delete
+```
+
+<h2 align="left"> 🎰 Teste dos Endpoints SWAGGER </h2>
+
+```bash
+http://40.90.198.227:8080/swagger-ui/index.html#/
 ```
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
